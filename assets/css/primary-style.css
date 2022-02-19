@@ -75,23 +75,32 @@ nav div {
     width: 50%;
     height: 100%;
     float: right;
-    justify-content: space-evenly;
+    justify-content: flex-end;
+    align-items: center;
     display: flex;
-}
-
-a {
-    all: unset;
+    /* background-color: #32403c; */
 }
 
 nav div a {
-    color: var(--bright-green);
+    color: white;
     font-size: 20px;
-    background-color: #32403c;
+    background-color: var(--light-green);
     text-align: center;
-    margin: 5px;
-    flex: 0.5;
+    font-family:'Courier New', Courier, monospace;
+    padding: 5px;
+    box-shadow: 5px 5px 10px var(--dark-green);
+    border-radius: 10px;
+    text-decoration: none;
+    min-width: 10%;
+    overflow: hidden;
+    margin-right: 10px;
+    margin-left: 10px;
+    text-overflow: ellipsis;
 }
 
+nav div a:hover {
+    background-color: var(--dark-green);
+}
 
 .header-text-container {
     height: 20%;
@@ -104,11 +113,7 @@ nav div a {
     letter-spacing: 3px;
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    width: 30%;
-    border-left-style: solid;
-    border-left-width: 2px;
-    border-right-style: solid;
-    border-right-width: 2px;
+    width: 50%;
     margin: 0 auto;
 }
 
@@ -128,10 +133,6 @@ nav div a {
     align-items: center;
 }
 
-.header-banner-container div img:hover {
-    height: 100%;
-}
-
 #header-img-center {
     flex: 2;
     height: 100%;
@@ -139,6 +140,8 @@ nav div a {
     object-position: center;
     object-fit: cover;
     border-radius: 10px;
+    box-shadow: 5px 5px 10px black;
+    transition: 0.2s;
 }
 
 .header-img {
@@ -146,6 +149,14 @@ nav div a {
     height: 85%;
     max-width: 25%;
     object-fit: cover;
+    box-shadow: 5px 5px 10px black;
+}
+
+.header-img:hover {
+    transition: 0.2s;
+    flex: 2;
+    max-width: 50%;
+    height: 90%;
 }
 
 .left-edge-round {
