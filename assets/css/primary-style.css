@@ -1,3 +1,81 @@
+/*
+    Author:                     William J. Horn
+    Document:                   primary-style.html
+    Created:                    2/18/2022 6:29PM
+    Last Modified:              2/18/2022 6:29PM
+
+    ================
+    == CHANGE LOG ==
+    ================
+
+    ? @change-log-info
+    ----------------------------------------------------------------------------------------------------------------------------------
+    Change log is recorded with change id, denoted by: #change:xxxx-"description about change" where "xxxx" is a 4-digit hexadecimal. 
+    The change id index is recorded under "@change-log" and is where all information about the change(s) are stored. Within the 
+    document code, a change id is given near the sections of code that have been modified. The modified code is wrapped between two 
+    comment lines that read:
+
+        THIS    #change:xxxx-"description about change" // BEGIN // 
+        AND         ...[[code affected by change]]...
+        THIS    #change:xxxx-"description about change" \\ END \\
+
+    Other non-specific changes worth documenting will be listed below "OTHER:" within each change-log record.
+    ----------------------------------------------------------------------------------------------------------------------------------
+
+    ? @change-log
+    ----------------------------------------------------------------------------------------------------------------------------------
+    | Date: 2/18/2022 |
+    -------------------
+
+    OTHER: -
+    ----------------------------------------------------------------------------------------------------------------------------------
+*/
+
+/* GLOBAL STYLES // BEGIN // */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* GLOBAL STYLES \\ END \\ */
+
+
+header {
+    background-color: #69897e;
+    height: 250px;
+    position: relative;
+}
+
+nav {
+    background-color: black;
+    opacity: 0.5;
+    height: 20%;
+}
+
+header div {
+    padding: 20px;
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    left: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner-side-img {
+    flex: 0.9;
+    height: 80%;
+    object-fit: cover;
+}
+
+#header-banner-center {
+    flex: 2;
+    height: 90%;
+    object-fit: cover;
+    object-position: bottom;
+}
+
 
 
 .debug {
@@ -5,10 +83,3 @@
     width: 50px;
     background-color: red;
 }
-
-header ul div {
-    height: 50px;
-    width: 50px;
-    background-color: red;
-}
-
