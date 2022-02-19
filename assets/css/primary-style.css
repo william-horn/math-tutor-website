@@ -27,7 +27,9 @@
     | Date: 2/18/2022 |
     -------------------
 
-    OTHER: -
+    N/A
+
+    OTHER: - N/A
     ----------------------------------------------------------------------------------------------------------------------------------
 */
 
@@ -47,38 +49,87 @@
     --dark-green-transparent: rgba(73, 94, 87, 0.5);
 }
 
+body {
+    height: 2000px;
+}
 
 header {
     /* background-color: var(--light-green); */
     height: 250px;
-    position: relative;
+} 
+
+header h1 span {
+    color: #394a30;
 }
 
-header nav {
+nav {
     background-color: var(--light-green);
-    height: 20%;
+    height: 60px;
     width: 70%;
-    left: 15%;
-    position: absolute;
-    bottom: 0;
+    margin: 0 auto;
+    position: sticky;
+    top: 0;
 }
 
-header section {
-    width: 100%;
+nav div {
+    width: 50%;
+    height: 100%;
+    float: right;
+    justify-content: space-evenly;
+    display: flex;
+}
+
+a {
+    all: unset;
+}
+
+nav div a {
+    color: var(--bright-green);
+    font-size: 20px;
+    background-color: #32403c;
+    text-align: center;
+    margin: 5px;
+    flex: 0.5;
+}
+
+
+.header-text-container {
+    height: 20%;
+    background-color: var(--light-green);
+    padding: 4px;
+}
+
+.header-text-container h1 {
+    color: white;
+    letter-spacing: 3px;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 30%;
+    border-left-style: solid;
+    border-left-width: 2px;
+    border-right-style: solid;
+    border-right-width: 2px;
+    margin: 0 auto;
+}
+
+.header-banner-container {
     height: 80%;
-    position: absolute;
-    bottom: 20%;
+    position: relative;
     background-color: var(--dark-green);
     padding: 10px;
 }
 
-header section div {
+.header-banner-container div {
     height: 100%;
     width: 60%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.header-banner-container div img:hover {
+    height: 100%;
 }
 
 #header-img-center {
@@ -98,19 +149,16 @@ header section div {
 }
 
 .left-edge-round {
-    border: 0;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
 
 .right-edge-round {
-    border: 0;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
 
 .bottom-edge-round {
-    border: 0;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
@@ -118,9 +166,9 @@ header section div {
 
 
 .debug {
-    flex: 2;
-    border: 1px solid white;
-    background-color: var(--bright-green);
+    height: 50px;
+    width: 50px;
+    background-color: red;
 }
 
 .debug1 {
