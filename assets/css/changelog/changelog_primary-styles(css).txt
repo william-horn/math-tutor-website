@@ -6,9 +6,12 @@
 ----------------------------------------------------------------------------------------------------------------------------------
                                                                                                     | @changelog-date:02/20/2022 |
                                                                                                     ------------------------------
-@changelog-record:#change[1.0]-"added useless comment"
+@changelog-record:#change[1.1]-"appended useless comment"
     [1.0]
         -   a useless comment was added
+
+    [1.1]
+        -   appended useless comment
 
 
 
