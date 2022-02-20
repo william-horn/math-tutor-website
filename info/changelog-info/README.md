@@ -1,1 +1,0 @@
-changelog info here: <https://github.com/william-horn/my-coding-conventions/blob/main/universal-conventions/changelog-record-system.txt>
