@@ -4,6 +4,16 @@
 ==================================================================================================================================
 
 ----------------------------------------------------------------------------------------------------------------------------------
-                                                                                                    | @changelog-date:xx/xx/xxxx |
+                                                                                                    | @changelog-date:02/21/2022 |
                                                                                                     ------------------------------
-No records
+@changelog-record:#change[1.0]
+    [1.0]-"removed header-text-container"
+        *   removed <div class="header-text-container">. this was originally here to solve positioning issues, but has since
+            been replaced with h1{font-size: 2.25vw} to base the header's size on the viewport's view width.
+
+@changelog-record:#change[2.0]
+    [2.0]-"moved nav bar"
+        *   location of nav bar was moved out of <body> into <header> in order to properly align vertically with the rest of 
+            the header as the <h1> font-size changes accordingly to the screen width.
+
+----------------------------------------------------------------------------------------------------------------------------------

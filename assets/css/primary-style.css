@@ -27,10 +27,10 @@
     ? @document-changelog-detailed
     For all changelog history, navigate to the changelog folder within this file's directory and open the file named:
 
-    <this file's name>(<this file type>)
+    changelog_<this file's name>(<this file type>)
 
     Where <this file's name> is the name of this file and <this file type> is this file type's extension. For example, if this
-    file was named "index.html", the changelog file would be named "index(html)".
+    file was named "index.html", the changelog file would be named "changelog_index(html)".
 
     ==================================================================================================================================
 
@@ -44,15 +44,12 @@
     ==================================================================================================================================
 */
 
-/* GLOBAL STYLES --BEGIN-- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-/* GLOBAL STYLES --END-- */
 
-/* ELEMENT DEFAULTS --BEGIN-- */
+
+
+/*
+    CSS GLOBAL VARIABLES // BEGIN //
+*/
 :root {
     --dark-green: #495e57;
     --light-green: #69897e;
@@ -60,13 +57,38 @@
     --bright-green: #85bd6a;
     --dark-green-transparent: rgba(73, 94, 87, 0.5);
 }
+/* 
+    CSS GLOBAL VARIABLES \\ END \\ 
+*/
 
+
+
+
+/*
+    GLOBAL PROPERTY DEFAULTS // BEGIN // 
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*
+    GLOBAL PROPERTY DEFAULTS \\ END \\
+*/
+
+
+
+
+/* 
+    GLOBAL ELEMENT SELECTORS // BEGIN // 
+*/
 body {
     height: 2000px;
 }
 
 header {
     /* background-color: var(--light-green); */
+    /* background-color: black; */
     height: 250px;
 } 
 
@@ -78,13 +100,15 @@ nav {
     position: sticky;
     top: 0;
 }
-/* ELEMENT DEFAULTS --END-- */
+/* 
+    GLOBAL ELEMENT SELECTORS \\ END \\ 
+*/
 
 
 
 
 
-/* Second-Order specificity // BEGIN // */
+
 nav div {
     width: 50%;
     height: 100%;
@@ -94,7 +118,7 @@ nav div {
     display: flex;
     /* background-color: #32403c; */
 }
-/* Second-Order specificity \\ END \\ */
+
 
 
 
@@ -126,18 +150,20 @@ header h1 span {
 
 
 /* Fourth-Order specificity // BEGIN // */
-.header-text-container {
+/* .header-text-container {
     height: 20%;
     background-color: var(--light-green);
     padding: 4px;
-}
+} */
 
-.header-text-container h1 {
+header h1 {
     color: white;
     letter-spacing: 3px;
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    width: 50%;
+    background-color: var(--light-green);
+    padding: 4px;
+    font-size: 2.25vw;
     margin: 0 auto;
 }
 
@@ -223,6 +249,3 @@ nav div a:first-of-type {
 /* Seventh-Order specificity \\ END \\ */
 
 
-
-/* @changelog-record:#change[1.1]-"appended useless comment" // BEGIN-END \\ */
-/* useless comment appended */
