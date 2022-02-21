@@ -65,7 +65,7 @@
     --theme-medium-green-box-shadow: #717171;
 
     --primary-header-font: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    --primary-background-img: url(../imgs/mathbg9.png);
+    --primary-background-img: url(../imgs/math-bg-11.png);
 }
 /* 
     CSS GLOBAL VARIABLES \\ END \\ 
@@ -93,7 +93,7 @@
     GLOBAL ELEMENT SELECTORS // BEGIN // 
 */
 body {
-    /* height: 2000px; */
+    height: 2000px;
     background-image: var(--primary-background-img);
     background-repeat: no-repeat;
 }
@@ -114,7 +114,8 @@ nav {
     margin: 0 auto;
     position: sticky;
     top: 0;
-    box-shadow: 0 5px black;
+    box-shadow: 0 5px 10px black;
+    /* box-shadow: 0 5px black; */
     z-index: 10;
 }
 
@@ -208,7 +209,7 @@ h1 span {
     background-color: var(--theme-medium-green);
     background-repeat: no-repeat;
     padding: 10px;
-    box-shadow: 0 5px black;
+    box-shadow: 0 5px 10px black;
 }
 
 .header-img {
@@ -278,13 +279,13 @@ nav div {
 nav div a {
     color: white;
     font-size: 20px;
-    background-color: var(--theme-light-green);
+    /* background-color: var(--theme-light-green); */
     text-align: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: var(--primary-header-font);
     padding: 5px;
-    box-shadow: 0 0 15px var(--theme-medium-green);
+    /* box-shadow: 0 0 15px var(--theme-medium-green); */
     border-radius: 10px;
-    text-decoration: none;
+    /* text-decoration: none; */
     min-width: 10%;
     overflow: hidden;
     margin-right: 10px;
@@ -298,6 +299,7 @@ nav div a:hover {
 
 nav div a:first-of-type {
     color: var(--theme-lightest-green);
+    box-shadow: 0 0 15px var(--theme-medium-green);
 }
 /*
     NAV BAR STYLES \\ END \\
