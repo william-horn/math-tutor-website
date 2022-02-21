@@ -93,7 +93,7 @@
     GLOBAL ELEMENT SELECTORS // BEGIN // 
 */
 body {
-    height: 2000px;
+    /* height: 2000px; */
     background-image: var(--primary-background-img);
     background-repeat: no-repeat;
 }
