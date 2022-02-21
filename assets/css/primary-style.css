@@ -39,23 +39,33 @@
     | DOCUMENT TODO |
     ==================================================================================================================================
 
-    -
+    -   finish nav bar
+    -   finish "about me" section
 
     ==================================================================================================================================
 */
 
 
+/*
+    ? @metadata
+    ==================================================
+    ================== CSS METADATA ==================
+    ==================================================
+*/
 
 
 /*
     CSS GLOBAL VARIABLES // BEGIN //
 */
 :root {
-    --dark-green: #495e57;
-    --light-green: #69897e;
-    --darkest-green: #32403c;
-    --bright-green: #85bd6a;
-    --dark-green-transparent: rgba(73, 94, 87, 0.5);
+    --theme-lightest-green: #e2ffd2;
+    --theme-light-green: #69897e;
+    --theme-medium-green: #495e57;
+    --theme-dark-green: #394134;
+    --theme-medium-green-box-shadow: #717171;
+
+    --primary-header-font: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    --primary-background-img: url(../imgs/mathbg9.png);
 }
 /* 
     CSS GLOBAL VARIABLES \\ END \\ 
@@ -84,22 +94,57 @@
 */
 body {
     height: 2000px;
+    background-image: var(--primary-background-img);
+    background-repeat: no-repeat;
 }
 
+/* 
+@changelog-record:#change[2.0]-"disabled header properties" // BEGIN //
 header {
-    /* background-color: var(--light-green); */
-    /* background-color: black; */
+    background-color: black;
     height: 250px;
-} 
+}
+@changelog-record:#change[2.0]-"disabled header properties" \\ END \\ 
+*/
 
 nav {
-    background-color: var(--light-green);
+    background-color: var(--theme-light-green);
     height: 60px;
     width: 70%;
     margin: 0 auto;
     position: sticky;
     top: 0;
+    box-shadow: 0 5px black;
+    z-index: 10;
 }
+
+h1 {
+    color: white;
+    letter-spacing: 3px;
+    text-align: center;
+    font-family: var(--primary-header-font);
+    background-color: var(--theme-light-green);
+    padding: 4px;
+    font-size: 2.25vw;
+    margin: 0 auto;
+}
+
+h2 {
+    color: var(--theme-lightest-green);
+    font-family: var(--primary-header-font);
+    letter-spacing: 2px;
+    font-weight: bold;
+    opacity: 0.5;
+    margin: 20px 20px 20px 0;
+}
+
+p {
+    color: white;
+    font-weight: bold;
+    opacity: 0.6;
+    letter-spacing: 1px;
+}
+
 /* 
     GLOBAL ELEMENT SELECTORS \\ END \\ 
 */
@@ -107,81 +152,9 @@ nav {
 
 
 
-
-
-nav div {
-    width: 50%;
-    height: 100%;
-    float: right;
-    justify-content: flex-end;
-    align-items: center;
-    display: flex;
-    /* background-color: #32403c; */
-}
-
-
-
-
-
-
-/* Third-Order specificity // BEGIN // */
-nav div a {
-    color: white;
-    font-size: 20px;
-    background-color: var(--light-green);
-    text-align: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    padding: 5px;
-    box-shadow: 5px 5px 10px var(--dark-green);
-    border-radius: 10px;
-    text-decoration: none;
-    min-width: 10%;
-    overflow: hidden;
-    margin-right: 10px;
-    margin-left: 10px;
-    text-overflow: ellipsis;
-}
-
-header h1 span {
-    color: #394a30;
-}
-/* Third-Order specificity \\ END \\ */
-
-
-
-/* Fourth-Order specificity // BEGIN // */
-/* .header-text-container {
-    height: 20%;
-    background-color: var(--light-green);
-    padding: 4px;
-} */
-
-header h1 {
-    color: white;
-    letter-spacing: 3px;
-    text-align: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background-color: var(--light-green);
-    padding: 4px;
-    font-size: 2.25vw;
-    margin: 0 auto;
-}
-
-.header-banner-container {
-    height: 80%;
-    position: relative;
-    background-color: var(--dark-green);
-    padding: 10px;
-}
-
-.header-img {
-    flex: 1;
-    height: 85%;
-    max-width: 25%;
-    object-fit: cover;
-    box-shadow: 5px 5px 10px black;
-}
-
+/*
+    UTILITY CLASSES // BEGIN //
+*/
 .left-edge-round {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -197,55 +170,180 @@ header h1 {
     border-bottom-right-radius: 10px;
 }
 
+.top-edge-round {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
 .debug {
     height: 50px;
     width: 50px;
     background-color: red;
 }
-/* Fourth-Order specificity \\ END \\ */
+/* 
+    UTILITY CLASSES \\ END \\
+*/
 
 
+/*
+    ? @main
+    ==================================================
+    ================== CSS STYLING ===================
+    ==================================================
+*/
 
-/* Fifth-Order specificity // BEGIN // */
+
+/*
+    HEADER STYLES // BEGIN //
+*/
+/* @changelog-record:#change[3.0]-"header now scales vertically" // BEGIN // */
+h1 span {
+    color: var(--theme-dark-green);
+}
+
+.header-banner-container {
+    height: 180px;
+    position: relative;
+    background-image: url(../imgs/math-banner-4.png);
+    background-color: var(--theme-medium-green);
+    background-repeat: no-repeat;
+    padding: 10px;
+    box-shadow: 0 5px black;
+}
+
+.header-img {
+    flex: 1;
+    height: 85%;
+    max-width: 15%;
+    object-fit: cover;
+    object-position: top;
+    border: 5px solid var(--theme-dark-green);
+    box-shadow: 0px 0px 15px black;
+    /* box-shadow: 0px 0px 40px var(--theme-lightest-green); */
+}
+
+/* @debug locate using some other method (flex method?) */
+#header-img-center {
+    flex: 2;
+    height: 100%;
+    max-width: 50%;
+    object-position: top;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 5px solid var(--theme-dark-green);
+    box-shadow: 0px 0px 15px black;
+    /* box-shadow: 0px 5px black; */
+    /* box-shadow: 0px 0px 40px var(--theme-lightest-green); */
+    transition: 0.2s;
+    z-index: 2;
+}
+
 .header-banner-container div {
     height: 100%;
     width: 60%;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
-/* Fifth-Order specificity \\ END \\ */
 
 .header-img:hover {
-    transition: 0.2s;
+    transition: 1s;
     flex: 2;
-    max-width: 50%;
+    object-position: center;
+    max-width: 20%;
     height: 90%;
 }
+/* @changelog-record:#change[3.0]-"header now scales vertically" \\ END \\ */
+/*
+    HEADER STYLES \\ END \\
+*/
 
-/* Sixth-Order specificity // BEGIN // */
+
+
+
+/*
+    NAV BAR STYLES // BEGIN //
+*/
+nav div {
+    width: 50%;
+    height: 100%;
+    float: right;
+    justify-content: flex-end;
+    align-items: center;
+    display: flex;
+    /* background-color: #32403c; */
+}
+
+nav div a {
+    color: white;
+    font-size: 20px;
+    background-color: var(--theme-light-green);
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 5px;
+    box-shadow: 0 0 15px var(--theme-medium-green);
+    border-radius: 10px;
+    text-decoration: none;
+    min-width: 10%;
+    overflow: hidden;
+    margin-right: 10px;
+    margin-left: 10px;
+    text-overflow: ellipsis;
+}
+
 nav div a:hover {
-    background-color: var(--dark-green);
+    background-color: var(--theme-medium-green);
 }
 
 nav div a:first-of-type {
-    color: #e2ffd2;
+    color: var(--theme-lightest-green);
 }
-/* Sixth-Order specificity \\ END \\ */
+/*
+    NAV BAR STYLES \\ END \\
+*/
 
 
-/* Seventh-Order specificity // BEGIN // */
-#header-img-center {
-    flex: 2;
-    height: 100%;
-    max-width: 50%;
-    object-position: center;
+
+
+/*
+    MAIN PAGE CONTENT // BEGINS //
+*/
+
+main section {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px auto;
+    /* background-color: black; */
+    padding: 35px;
+    width: 70%;
+}
+
+main section div img {
+    border-radius: 20px;
+    background-color: var(--theme-medium-green);
+    box-shadow: 0 0 10px black;
+    height: 25vw;
+    width: 25vw;
     object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px black;
-    transition: 0.2s;
+    padding: 20px;
 }
-/* Seventh-Order specificity \\ END \\ */
 
+main section article {
+    background-color: var(--theme-medium-green);
+    box-shadow: 0 0 10px black;
+    border: 10px solid var(--theme-light-green);
+    border-radius: 20px;
+    width: 50%;
+
+    padding-left: 20px;
+    padding-right: 20px
+}
+
+
+
+
+/*
+    MAIN PAGE CONTENT \\ ENDS \\
+*/
 

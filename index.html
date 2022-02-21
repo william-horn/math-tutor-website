@@ -43,8 +43,9 @@
     | DOCUMENT TODO |
     ==================================================================================================================================
 
-    -   work on the "about me" body of the page
-    -   fix the nav bar not sticking to the top of the screen on scroll (sticky only works when nav bar is in the <body>, but for
+    -*  work on the "about me" body of the page
+    
+    -!  fix the nav bar not sticking to the top of the screen on scroll (sticky only works when nav bar is in the <body>, but for
         position scaling purposes it must be within the <header>)
 
     ==================================================================================================================================
@@ -55,6 +56,7 @@
 <html>
 
     <!--
+        ? @metadata
         ==========================
         ==== WEBPAGE METADATA ====
         ==========================
@@ -66,6 +68,7 @@
     </head>
 
     <!--
+        ? @main
         ==========================
         ===== WEBPAGE RENDER =====
         ==========================
@@ -83,31 +86,40 @@
             <!-- header primary banner -->
             <div class="header-banner-container">
                 <div>
-                    <img class="header-img left-edge-round" src="./assets/imgs/header-banner-left.jpg" alt="">
-                    <img id="header-img-center" src="./assets/imgs/header-banner-center.jpg" alt="">
-                    <img class="header-img right-edge-round" src="./assets/imgs/header-banner-right.jpg" alt="">
+                    <img class="header-img left-edge-round" src="./assets/imgs/Snapchat-2086441024.jpg" alt="">
+                    <img id="header-img-center" src="./assets/imgs/S2290001_Moment.jpg" alt="">
+                    <img class="header-img right-edge-round" src="./assets/imgs/Snapchat-1898247583.jpg" alt="">
                 </div>
             </div>
 
-            <!-- primary sticky nav bar -->
-            <!-- @changelog-record:#change[2.0]-"moved nav bar" // BEGIN // -->
-            <nav class="bottom-edge-round">
-                <div>
-                    <a href="#header-img-center"><strong>Home</strong></a>
-                    <a href="#header-img-center">Contact</a>
-                    <a href="#header-img-center">Appointments</a>
-                </div>
-            </nav>
-            <!-- @changelog-record:#change[2.0]-"moved nav bar" \\ END \\ -->
-
         </header>
+
+        <!-- primary sticky nav bar -->
+        <!-- @changelog-record:#change[2.1]-"fixed nav bar" // BEGIN // -->
+        <nav class="bottom-edge-round">
+            <div>
+                <a href="#header-img-center"><strong>Home</strong></a>
+                <a href="#header-img-center">Contact</a>
+                <a href="#header-img-center">Appointments</a>
+            </div>
+        </nav>
+        <!-- @changelog-record:#change[2.1]-"fixed nav bar" \\ END \\ -->
         <!-- HEADER \\ END \\ -->
 
         <!-- MAIN PAGE CONTENT // BEGIN // -->
         <main>
             
             <section>
-                <h2>About Me</h2>
+                <article>
+                    <h2>About Me</h2>
+                    <p>
+                        Hello, my name is Will. I do many things. Sometimes I do lots of things. But I never do too many things. It's important to take a break from some things so that you have something to look forward to later.
+                    </p>
+                </article>
+
+                <div>
+                    <img src="./assets/imgs/me1-1.jpg" alt="">
+                </div>
             </section>
 
         </main>
